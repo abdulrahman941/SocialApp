@@ -37,7 +37,8 @@ export default function CreatePost({callback}) {
     e.target.value=''
   }
   return <>
-  <div className="w-full mx-auto">
+  <div className="container mx-auto bg-gray-300">
+    <div className="sm:w-full mx-auto">
     <form onSubmit={addPost}>
      <div className="editor py-5 mt-5 bg-gray-50 mx-auto flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-4xl">
       <h2 className="text-xl font-bold my-4">Create a new Post</h2>
@@ -65,6 +66,7 @@ export default function CreatePost({callback}) {
   </div>
 </div>
   </form>
+  </div>
   </div>
 
   

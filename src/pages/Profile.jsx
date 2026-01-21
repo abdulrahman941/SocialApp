@@ -93,14 +93,14 @@ async function updateUserPhoto(e){
 
 
   return <>
-   
-      <div className="">
+   <div className="container mx-auto">
+     <div className="">
         <div className="flex items-center border-b border-gray-300 pb-5 px-10 mt-10 relative">
            {/* TODO: Make title and description dynamic with user's data */}
       <title>Your Profile | Route Social</title>
       <meta name="description" content="View and manage your profile, posts, and connections on Route Social. Customize your presence in the community."/>
         <div className="relative">
-          <img className="border border-gray-300 shadow-2xl shadow-gray-300 w-32 h-32 rounded-full" src={ImageURL || userData?.photo} alt=""/>
+          <img className="w-25 h-25  border border-gray-300 shadow-2xl shadow-gray-300 md:w-32 md:h-32 rounded-full" src={ImageURL || userData?.photo} alt=""/>
           <form onSubmit={updateUserPhoto} className="mt-2">
             <input
               type="file"
@@ -131,6 +131,8 @@ async function updateUserPhoto(e){
         
    </div> 
    </div>
+   </div>
+     
 </>
 
 } 

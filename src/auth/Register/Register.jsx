@@ -51,9 +51,10 @@ setisLoading(false)
 }
 
 
-  return (<>
-  <div className="bg-gray-200 min-h-screen text-center flex justify-center items-center">
-    <div className="w-1/3 p-5 m-auto bg-white shadow rounded-2xl">
+  return <>
+ <div className="container mx-auto bg-gray-300">
+   <div className="bg-gray-200 min-h-screen text-center flex justify-center items-center">
+    <div className="sm:w-full md:w-1/3 p-5 m-auto bg-white shadow rounded-2xl">
     <h2 className='text-2xl my-4 font-bold text-sky-700'>Register now</h2>
     <form onSubmit={handleSubmit(submitForm)}>
       <div className="flex flex-col gap-6">
@@ -101,10 +102,11 @@ setisLoading(false)
     </form>
     </div>
   </div>
+ </div>
   
   
   
   </>
     
-  )
+  
 }

@@ -56,8 +56,9 @@ else{
 
 
   return (<>
-  <div className="bg-gray-200 min-h-screen text-center flex justify-center items-center">
-    <div className="w-1/3 p-5 m-auto bg-white shadow rounded-2xl">
+  <div className="container mx-auto bg-gray-300">
+    <div className="bg-gray-200 min-h-screen text-center flex justify-center items-center">
+    <div className="sm:w-full md:w-1/3 p-5 m-auto bg-white shadow rounded-2xl">
     <h2 className='text-2xl my-4 font-bold text-sky-700'>Login now</h2>
     <form onSubmit={handleSubmit(submitForm)}>
       <div className="flex flex-col gap-6">
@@ -73,6 +74,7 @@ else{
       <p>Does not you have an account ? <Link className='text-sky-600' to='/Register'>sign up</Link></p>
     </form>
     </div>
+  </div>
   </div>
   
   
