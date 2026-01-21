@@ -9,7 +9,7 @@ import { HeroUIProvider } from '@heroui/react';
 import { CounterContextProvider } from './Context/CounterContext';
 import Navbar from './component/Navbar/Navbar';
 import { AuthContextProvider } from './Context/AuthContext';
-import ProtectRoutes from './pages/protectRoutes';
+import ProtectRoutes from 'src/pages/ProtectRoutes.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import TokenContextProvider from './Context/tokenContext';
@@ -24,11 +24,11 @@ const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {path: "/",element: <Layout />,children: [
     {index: true, element: <Suspense fallback={<Spinner/>}><Login /></Suspense>},
-    {path: "Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
-    {path: "Home", element: <ProtectRoutes><Home /></ProtectRoutes>},
-    {path: "Profile", element: <ProtectRoutes><Profile /></ProtectRoutes>},
-    {path: "Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
-    {path: "Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
+    {path: "/Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
+    {path: "/Home", element: <ProtectRoutes><Home /></ProtectRoutes>},
+    {path: "/Profile", element: <ProtectRoutes><Profile /></ProtectRoutes>},
+    {path: "/Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
+    {path: "/Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
     {path:  "*" ,element: <Notfound />}
 
 
