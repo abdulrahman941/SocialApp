@@ -63,7 +63,7 @@ export default function PostDropDown({postId,callback}) {
            <Button  className="bg-white border-0" onPress={onOpen}>Edit Post</Button>
         </DropdownItem>
         <DropdownItem onClick={deletePost} key="delete" textValue="delete post"className="text-danger" color="danger">
-          {isLoading?<Spinner size="sm"/>:" Delete comment"}
+          {isLoading?<Spinner size="sm"/>:" Delete post"}
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

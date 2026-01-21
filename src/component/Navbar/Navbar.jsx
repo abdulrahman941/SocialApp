@@ -13,7 +13,7 @@ function LogOut(){
   localStorage.removeItem('token')
    setuserToken(null)
    setuserData(null)
-  navigate('/',{replace:true})
+  navigate('/')
 }
 
  
