@@ -1,5 +1,5 @@
 import Layout from './component/Layout/Layout';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter} from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Setting from './pages/Setting';
@@ -45,7 +45,6 @@ function App() {
       <TokenContextProvider>
     <QueryClientProvider client={queryClient}>
     <CounterContextProvider>
-   
               <RouterProvider router={router} />
     </CounterContextProvider>
      <ReactQueryDevtools/>
