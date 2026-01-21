@@ -1,5 +1,5 @@
 import Layout from './component/Layout/Layout';
-import { RouterProvider, createBrowserRouter} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter,HashRouter} from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Setting from './pages/Setting';
@@ -21,7 +21,7 @@ const Register = lazy(() => import('./auth/Register/Register'));
 
 const queryClient = new QueryClient()
 
-const router = createBrowserRouter([
+const router = HashRouter([
   {path: "/",element: <Layout />,children: [
     {index: true, element: <Suspense fallback={<Spinner/>}><Login /></Suspense>},
     {path: "/Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
