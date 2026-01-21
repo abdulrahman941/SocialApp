@@ -1,7 +1,7 @@
 {
   "name": "reactapp",
   "private": true,
-  "homepage": "https://abdulrahman941.github.io/SocialApp/",
+  "homepage": "https://abdulrahman941.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
