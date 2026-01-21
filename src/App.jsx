@@ -22,13 +22,13 @@ const Register = lazy(() => import('./auth/Register/Register'));
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
-  {path: "/SocialApp/",element: <Layout />,children: [
+  {path: "/",element: <Layout />,children: [
     {index: true, element: <Suspense fallback={<Spinner/>}><Login /></Suspense>},
-    {path: "/SocialApp/Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
-    {path: "/SocialApp/Home", element: <ProtectRoutes><Home /></ProtectRoutes>},
-    {path: "/SocialApp/Profile", element: <ProtectRoutes><Profile /></ProtectRoutes>},
-    {path: "/SocialApp/Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
-    {path: "/SocialApp/Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
+    {path: "Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
+    {path: "Home", element: <ProtectRoutes><Home /></ProtectRoutes>},
+    {path: "Profile", element: <ProtectRoutes><Profile /></ProtectRoutes>},
+    {path: "Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
+    {path: "Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
     {path:  "*" ,element: <Notfound />}
 
 
