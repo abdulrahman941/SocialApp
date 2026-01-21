@@ -31,9 +31,7 @@ const router = HashRouter([
     {path: "/Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
     {path:  "*" ,element: <Notfound />}
     ]}
-],{
-  basename:"/SocialApp"
-  })
+])
 
 function App() {
 
