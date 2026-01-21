@@ -1,11 +1,15 @@
 import React from 'react'
 import { Button } from '@heroui/react';
 import Error from '../../../src/assets/21.webp';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Notfound() {
 
+const navigate = useNavigate()
+
   function GoLogin(){
-    window.location.href="http://localhost:5191/SocialApp/"
+    navigate("/")
   }
   return <>
   <title>Error | Route Social</title>
