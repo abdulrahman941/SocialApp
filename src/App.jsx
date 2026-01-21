@@ -9,7 +9,7 @@ import { HeroUIProvider } from '@heroui/react';
 import { CounterContextProvider } from './Context/CounterContext';
 import Navbar from './component/Navbar/Navbar';
 import { AuthContextProvider } from './Context/AuthContext';
-import ProtectRoutes from 'src/pages/ProtectRoutes.jsx';
+import ProtectRoutes from './pages/ProtectRoutes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import TokenContextProvider from './Context/tokenContext';
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
     {path: "/Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
     {path: "/Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
     {path:  "*" ,element: <Notfound />}
-
-
     ]}
-])
+],{
+  basename:"/SocialApp"
+  })
 
 function App() {
 
