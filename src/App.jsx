@@ -1,8 +1,6 @@
 import Layout from './component/Layout/Layout';
 import { RouterProvider, createBrowserRouter,createHashRouter} from 'react-router-dom';
 import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Setting from './pages/Setting';
 import Singlepost from './pages/SinglePost';
 import Notfound from './component/Notfound/Notfound';
 import { HeroUIProvider } from '@heroui/react';
@@ -18,6 +16,8 @@ import Spinner from './Spinner/Spinner';
 
 const Login = lazy(() => import('./auth/Login/Login'));
 const Register = lazy(() => import('./auth/Register/Register'));
+const profile = lazy(() => import('./pages/Profile'));
+const Settings = lazy(() => import('./pages/Setting')); // مثال آخر
 
 const queryClient = new QueryClient()
 
@@ -26,8 +26,8 @@ const router = createHashRouter([
     {index: true, element: <Suspense fallback={<Spinner/>}><Login /></Suspense>},
     {path: "/Register", element: <Suspense fallback={<Spinner/>}><Register /></Suspense>},
     {path: "/Home", element: <ProtectRoutes><Home /></ProtectRoutes>},
-    {path: "/Profile", element: <ProtectRoutes><Profile /></ProtectRoutes>},
-    {path: "/Setting", element: <ProtectRoutes><Setting /></ProtectRoutes>},
+    {path: "/Profile", element: <ProtectRoutes><Suspense fallback={<Spinner/>}><Profile /></Suspense></ProtectRoutes>},
+    {path: "/Setting", element: <ProtectRoutes><Suspense fallback={<Spinner/>}><Setting /></Suspense></ProtectRoutes>},
     {path: "/Singlepost/:id", element: <ProtectRoutes>< Singlepost/></ProtectRoutes>},
     {path:  "*" ,element: <Notfound />}
     ]}
